@@ -1,0 +1,15 @@
+<launch>
+    <include file="$(find final_project)/launch/multi_turtlebot3.launch"/>
+    <include file="$(find turtlebot3_gazebo)/launch/multi_turtlebot3_slam.launch">
+        <arg name="ns" value="tb3_0"/>
+    </include>
+    <include file="$(find turtlebot3_gazebo)/launch/multi_turtlebot3_slam.launch">
+        <arg name="ns" value="tb3_1"/>
+    </include>
+    <include file="$(find turtlebot3_gazebo)/launch/multi_turtlebot3_slam.launch">
+        <arg name="ns" value="tb3_2"/>
+    </include>
+    <include file="$(find turtlebot3_gazebo)/launch/multi_map_merge.launch"/>
+    <node pkg="final_project" name="obj_avoidance" type="obj_avoidance.py" output="screen"/>
+    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find final_project)/rviz/slam.rviz"/>
+</launch>
