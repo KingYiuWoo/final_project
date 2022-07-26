@@ -16,7 +16,7 @@ class runRobot():  # main class
 
     def lidar_callback(self, msg):  # function for obstacle avoidance
         # "Safe distance"
-        self.distance = 1.5
+        self.distance = 1.0
         # Check Obstacle at the front
         if msg.ranges[0] > self.distance and msg.ranges[15] > self.distance and msg.ranges[345] > self.distance:
             self.twist.linear.x = 1.0 # linear velocity
