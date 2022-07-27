@@ -70,6 +70,6 @@ class runRobot():  # main class
 if __name__ == '__main__':
     rospy.init_node('obstacle_avoidance_node')
     runRobot("tb3_0")  # run robot 0
-    runRobot("tb3_1")  # run robot 1
+    #runRobot("tb3_1")  # robot 1 disabled -- controlled by navigation
     runRobot("tb3_2")  # run robot 2
     rospy.spin()

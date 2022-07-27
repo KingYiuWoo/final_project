@@ -10,6 +10,7 @@
         <arg name="ns" value="tb3_2"/>
     </include>
     <include file="$(find final_project)/launch/multi_map_merge.launch"/>
+    <include file="$(find final_project)/navigation/turtlebot3_navigation.launch"/>
     <node pkg="final_project" name="obj_avoidance" type="obj_avoidance.py" output="screen"/>
     <node name="rviz" pkg="rviz" type="rviz" args="-d $(find final_project)/rviz/slam.rviz"/>
 </launch>
