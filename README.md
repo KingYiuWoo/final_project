@@ -1,4 +1,4 @@
-# S17 Final Project - Object Avoidance using SLAM with Multiple Robots
+# Object Avoidance using SLAM with Multiple Robots
 Package to be installed:
 sudo apt-get install ros-noetic-multirobot-map-merge
 
